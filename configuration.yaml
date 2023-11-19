@@ -6,41 +6,40 @@ default_config:
 tts:
   - platform: google_translate
 
-group: !include groups.yaml
+#group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-sensor:
-#    - platform: myEnedis
-#      token: MVlwAMwZQPN4458XmieXTv1Fm7PAmRn6VkQCnOtRBsXxRMu1L8KgHu
-#      code: 09326917466545
-#      heures_creuses: "[['00:00','05:00'], ['21:30', '24:00']]"
-#      hc_cout: 0.15
-#      hp_cout: 0.15
-#      scan_interval: 3600
-    - platform: rflink
-      automatic_add: true
-      
+
+
+
+
+
+
+
 shell_command:
-  light_1: bash /config/relay1.sh
-  light_2: bash /config/relay2.sh
-  light_3: bash /config/relay3.sh
-  light_4: bash /config/relay4.sh
-  light_5: bash /config/relay5.sh
-  light_6: bash /config/relay6.sh
-  light_7: bash /config/relay7.sh
-  light_8: bash /config/relay8.sh
-  light_9: bash /config/relay9.sh
-  light_10: bash /config/relay10.sh
-  light_11: bash /config/relay11.sh
-  light_12: bash /config/relay12.sh
-  light_13: bash /config/relay13.sh
-  light_14: bash /config/relay14.sh
-  light_15: bash /config/relay15.sh
-  light_16: bash /config/relay16.sh
-  light_7_11: bash /config/relay_7_11.sh
-  light_9_10: bash /config/relay_9_10.sh
+  board_a_01: bash /config/relays/relay_A_01.sh
+  board_a_02: bash /config/relays/relay_A_02.sh
+  board_a_03: bash /config/relays/relay_A_03.sh
+  board_a_04: bash /config/relays/relay_A_04.sh
+  board_a_05: bash /config/relays/relay_A_05.sh
+  board_a_06: bash /config/relays/relay_A_06.sh
+  board_a_07: bash /config/relays/relay_A_07.sh
+  board_a_08: bash /config/relays/relay_A_08.sh
+  board_a_09: bash /config/relays/relay_A_09.sh
+  board_a_10: bash /config/relays/relay_A_10.sh
+  board_a_11: bash /config/relays/relay_A_11.sh
+  board_a_12: bash /config/relays/relay_A_12.sh
+  board_a_13: bash /config/relays/relay_A_13.sh
+  board_a_14: bash /config/relays/relay_A_14.sh
+  board_a_15: bash /config/relays/relay_A_15.sh
+  board_a_16: bash /config/relays/relay_A_16.sh
+  board_a_sallemanger: bash /config/relays/relay_A_sallemanger.sh
+  board_a_salon: bash /config/relays/relay_A_salon.sh
+  board_b_voletsud: bash /config/relays/relay_B_voletsud.sh
+  board_b_voletgauche: bash /config/relays/relay_B_voletgauche.sh
+  board_b_voletdroite: bash /config/relays/relay_B_voletdroite.sh
 
 switch:
   - platform: template
@@ -48,86 +47,95 @@ switch:
       couloir:
         friendly_name: "couloir"
         turn_on:
-          service: shell_command.light_6
+          service: shell_command.board_a_06
         turn_off:
-          service: shell_command.light_6
+          service: shell_command.board_a_06
       cuisine:
         friendly_name: "cuisine"
         turn_on:
-          service: shell_command.light_5
+          service: shell_command.board_a_05
         turn_off:
-          service: shell_command.light_5
+          service: shell_command.board_a_05
       salle:
         friendly_name: "Salle à manger"
         turn_on:
-          service: shell_command.light_7_11
+          service: shell_command.board_a_sallemanger
         turn_off:
-          service: shell_command.light_7_11
+          service: shell_command.board_a_sallemanger
       salon:
         friendly_name: "Salon"
         turn_on:
-          service: shell_command.light_9_10
+          service: shell_command.board_a_salon
         turn_off:
-          service: shell_command.light_9_10
+          service: shell_command.board_a_salon
       cuisine9:
         friendly_name: "Cuisine9"
         turn_on:
-          service: shell_command.light_5
+          service: shell_command.board_a_05
         turn_off:
-          service: shell_command.light_5
+          service: shell_command.board_a_05
       couloir1:
         friendly_name: "Couloir1"
         turn_on:
-          service: shell_command.light_6
+          service: shell_command.board_a_06
         turn_off:
-          service: shell_command.light_6
+          service: shell_command.board_a_06
       cuisine3:
         friendly_name: "Cuisine2"
         turn_on:
-          service: shell_command.light_7
+          service: shell_command.board_a_07
         turn_off:
-          service: shell_command.light_7
+          service: shell_command.board_a_07
       parking1:
         friendly_name: "Parking1"
         turn_on:
-          service: shell_command.light_8
+          service: shell_command.board_a_08
         turn_off:
-          service: shell_command.light_8
+          service: shell_command.board_a_08
       entree4:
         friendly_name: "Entree4"
         turn_on:
-          service: shell_command.light_9
+          service: shell_command.board_a_09
         turn_off:
-          service: shell_command.light_9
+          service: shell_command.board_a_09
       salon5:
         friendly_name: "Salon5"
         turn_on:
-          service: shell_command.light_10
+          service: shell_command.board_a_10
         turn_off:
-          service: shell_command.light_10
+          service: shell_command.board_a_10
       salon4:
         friendly_name: "Salon4"
         turn_on:
-          service: shell_command.light_11
+          service: shell_command.board_a_11
         turn_off:
-          service: shell_command.light_11
+          service: shell_command.board_a_11
       terrasse1:
         friendly_name: "Terrasse1"
         turn_on:
-          service: shell_command.light_12
+          service: shell_command.board_a_12
         turn_off:
-          service: shell_command.light_12
+          service: shell_command.board_a_12
+      voletsud:
+        friendly_name: "Volet sud"
+        turn_on:
+          service: shell_command.board_b_voletsud
+        turn_off:
+          service: shell_command.board_b_voletsud
+      voletgauche:
+        friendly_name: "Volet gauche"
+        turn_on:
+          service: shell_command.board_b_voletgauche
+        turn_off:
+          service: shell_command.board_b_voletgauche
+      voletdroite:
+        friendly_name: "Volet droite"
+        turn_on:
+          service: shell_command.board_b_voletdroite
+        turn_off:
+          service: shell_command.board_b_voletdroite
 
 
-rflink:
-  host: 192.168.1.33
-  port: 8886
-
-#logger:
-#  default: error
-#  logs:
-#    rflink: debug
-#    homeassistant.components.rflink: debug
 
 
 
