@@ -35,6 +35,22 @@ shell_command:
   board_a_14: bash /config/relays/relay_A_14.sh
   board_a_15: bash /config/relays/relay_A_15.sh
   board_a_16: bash /config/relays/relay_A_16.sh
+  board_b_01: bash /config/relays/relay_B_01.sh
+  board_b_02: bash /config/relays/relay_B_02.sh
+  board_b_03: bash /config/relays/relay_B_03.sh
+  board_b_04: bash /config/relays/relay_B_04.sh
+  board_b_05: bash /config/relays/relay_B_05.sh
+  board_b_06: bash /config/relays/relay_B_06.sh
+  board_b_07: bash /config/relays/relay_B_07.sh
+  board_b_08: bash /config/relays/relay_B_08.sh
+  board_b_09: bash /config/relays/relay_B_09.sh
+  board_b_10: bash /config/relays/relay_B_10.sh
+  board_b_11: bash /config/relays/relay_B_11.sh
+  board_b_12: bash /config/relays/relay_B_12.sh
+  board_b_13: bash /config/relays/relay_B_13.sh
+  board_b_14: bash /config/relays/relay_B_14.sh
+  board_b_15: bash /config/relays/relay_B_15.sh
+  board_b_16: bash /config/relays/relay_B_16.sh
   board_a_sallemanger: bash /config/relays/relay_A_sallemanger.sh
   board_a_salon: bash /config/relays/relay_A_salon.sh
   board_b_voletsud: bash /config/relays/relay_B_voletsud.sh
