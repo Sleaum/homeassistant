@@ -11,13 +11,6 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-
-
-
-
-
-
-
 shell_command:
   board_a_01: bash /config/relays/relay_A_01.sh
   board_a_02: bash /config/relays/relay_A_02.sh
@@ -51,11 +44,11 @@ shell_command:
   board_b_14: bash /config/relays/relay_B_14.sh
   board_b_15: bash /config/relays/relay_B_15.sh
   board_b_16: bash /config/relays/relay_B_16.sh
-  board_a_sallemanger: bash /config/relays/relay_A_sallemanger.sh
-  board_a_salon: bash /config/relays/relay_A_salon.sh
-  board_b_voletsud: bash /config/relays/relay_B_voletsud.sh
-  board_b_voletgauche: bash /config/relays/relay_B_voletgauche.sh
-  board_b_voletdroite: bash /config/relays/relay_B_voletdroite.sh
+  light_salle: bash /config/relays/relay_A_salleamanger.sh
+  light_salon: bash /config/relays/relay_A_salon.sh
+  volet_sud: bash /config/relays/relay_B_voletsud.sh
+  volet_gauche: bash /config/relays/relay_B_voletgauche.sh
+  volet_droite: bash /config/relays/relay_B_voletdroite.sh
 
 switch:
   - platform: template
@@ -75,15 +68,15 @@ switch:
       salle:
         friendly_name: "Salle à manger"
         turn_on:
-          service: shell_command.board_a_sallemanger
+          service: shell_command.light_salle
         turn_off:
-          service: shell_command.board_a_sallemanger
+          service: shell_command.light_salle
       salon:
         friendly_name: "Salon"
         turn_on:
-          service: shell_command.board_a_salon
+          service: shell_command.light_salon
         turn_off:
-          service: shell_command.board_a_salon
+          service: shell_command.light_salon
       cuisine9:
         friendly_name: "Cuisine9"
         turn_on:
@@ -135,21 +128,21 @@ switch:
       voletsud:
         friendly_name: "Volet sud"
         turn_on:
-          service: shell_command.board_b_voletsud
+          service: shell_command.volet_sud
         turn_off:
-          service: shell_command.board_b_voletsud
+          service: shell_command.volet_sud
       voletgauche:
         friendly_name: "Volet gauche"
         turn_on:
-          service: shell_command.board_b_voletgauche
+          service: shell_command.volet_gauche
         turn_off:
-          service: shell_command.board_b_voletgauche
+          service: shell_command.volet_gauche
       voletdroite:
         friendly_name: "Volet droite"
         turn_on:
-          service: shell_command.board_b_voletdroite
+          service: shell_command.volet_droite
         turn_off:
-          service: shell_command.board_b_voletdroite
+          service: shell_command.volet_droite
 
 
 
